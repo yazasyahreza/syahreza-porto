@@ -48,9 +48,9 @@ export const HeroSection = () => {
         </span>{" "}
         <a href="#about">
           {" "}
-          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary shadow-lg hover:scale-110 transition-transform duration-300">
+          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 shadow-lg hover:scale-110 transition-transform duration-300">
             {" "}
-            <ArrowDown className="h-5 w-5 text-white" />{" "}
+            <ArrowDown size={20} />{" "}
           </div>{" "}
         </a>{" "}
       </div>{" "}
