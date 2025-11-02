@@ -21,7 +21,7 @@ export const HeroSection = () => {
               {" "}
               My Space{" "}
             </span>{" "}
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
+            <span className="text-gradient opacity-0 animate-fade-in-delay-2">
               {" "}
               of Creation{" "}
             </span>{" "}
@@ -40,7 +40,7 @@ export const HeroSection = () => {
           </div>{" "}
         </div>{" "}
       </div>{" "}
-      <div className="absolute bottom-[2rem] sm:bottom-16 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+      <div className="absolute bottom-[1.5rem] sm:bottom-16 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
         {" "}
         <span className="text-sm text-muted-foreground mb-2">
           {" "}
