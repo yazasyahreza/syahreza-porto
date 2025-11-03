@@ -153,7 +153,9 @@ export const ProjectsSection = () => {
         <div className="text-center mt-12">
           <a
             href="https://github.com/yazasyahreza"
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            className="cosmic-button relative text-white font-semibold rounded-full border border-violet-500 
+             shadow-[0_0_10px_rgba(139,92,246,0.6)] hover:shadow-[0_0_25px_rgba(139,92,246,1)] 
+             hover:border-violet-400 transition-all duration-850 ease-in-out w-fit flex items-center mx-auto gap-2"
             target="_blank"
           >
             Check My Github <ArrowRight size={16} />

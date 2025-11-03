@@ -62,7 +62,7 @@ export const GallerysSection = () => {
               className={cn(
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
                 activeCategory === category
-                  ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white"
+                  ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_25px_rgba(167,139,250,0.6)] transition-all duration-300"
                   : "bg-secondary/70 text-foreground hover:bg-secondary/90"
               )}
             >

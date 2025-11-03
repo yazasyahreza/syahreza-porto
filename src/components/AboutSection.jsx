@@ -30,13 +30,20 @@ export const AboutSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
+              <a
+                href="#contact"
+                className="cosmic-button relative px-6 py-2 text-white font-semibold rounded-full border border-violet-500 
+             shadow-[0_0_10px_rgba(139,92,246,0.6)] hover:shadow-[0_0_25px_rgba(139,92,246,1)] 
+             hover:border-violet-400 transition-all duration-850 ease-in-out"
+              >
                 Get In Touch
               </a>
 
               <a
                 href=""
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                className="relative px-6 py-2 rounded-full border border-violet-400 text-violet-300 font-medium 
+             hover:text-white hover:shadow-[0_0_15px_rgba(139,92,246,0.6)] hover:border-violet-500
+             transition-all duration-850 ease-in-out"
               >
                 Download CV
               </a>
