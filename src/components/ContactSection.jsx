@@ -70,7 +70,7 @@ export const ContactSection = () => {
 
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400">
+                <div className="p-3 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 shadow-[0_0_10px_rgba(139,92,246,0.6)]">
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -84,7 +84,7 @@ export const ContactSection = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400">
+                <div className="p-3 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 shadow-[0_0_10px_rgba(139,92,246,0.6)]">
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -98,7 +98,7 @@ export const ContactSection = () => {
                 </div>
               </div>
               <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400">
+                <div className="p-3 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 shadow-[0_0_10px_rgba(139,92,246,0.6)]">
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>

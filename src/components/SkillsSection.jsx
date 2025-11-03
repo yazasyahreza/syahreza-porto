@@ -54,10 +54,10 @@ export const SkillsSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-all duration-300 capitalize",
                 activeCategory === category
                   ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_25px_rgba(167,139,250,0.6)] transition-all duration-300"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary/90 hover:shadow-[0_0_10px_rgba(139,92,246,0.4)]"
               )}
             >
               {category}

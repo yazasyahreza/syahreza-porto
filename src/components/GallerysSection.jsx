@@ -14,8 +14,9 @@ const gallerys = [
   {
     id: 2,
     date: "June 2023",
-    title: "Intership Certificate",
-    description: "I got this certificate after participating in internship activities and getting a score of 93 predicate A",
+    title: "Internship Certificate",
+    description:
+      "I got this certificate after participating in internship activities and getting a score of 93 predicate A.",
     image: "/projects/s2.jpeg",
     category: "certificates",
   },
@@ -23,7 +24,8 @@ const gallerys = [
     id: 3,
     date: "June 2023",
     title: "Certificate of Internship Completion",
-    description: "Excellent Junior Backend Dev, I got this certificate after graduating from my internship as a junior backend developer in a software house.",
+    description:
+      "Excellent Junior Backend Dev, I got this certificate after graduating from my internship as a junior backend developer in a software house.",
     image: "/projects/s3.jpeg",
     category: "certificates",
   },
@@ -40,16 +42,22 @@ export const GallerysSection = () => {
   );
 
   return (
-    <section id="gallerys" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+    <section id="gallerys" className="py-24 px-4 relative overflow-hidden">
+      <div
+        className="container mx-auto max-w-5xl"
+      >
+        <h2
+          className="text-3xl md:text-4xl font-bold mb-4 text-center"
+        >
           The{" "}
           <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
             Gallerys
           </span>
         </h2>
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p
+          className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"
+        >
           My Gallery showcases a collection of my certificates, activities, and
           memorable moments.
         </p>
@@ -60,10 +68,10 @@ export const GallerysSection = () => {
               key={key}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize",
+                "px-5 py-2 rounded-full transition-all duration-300 capitalize",
                 activeCategory === category
-                  ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_25px_rgba(167,139,250,0.6)] transition-all duration-300"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary/90"
+                  ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_15px_rgba(139,92,246,0.6)]"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary/90 hover:shadow-[0_0_10px_rgba(139,92,246,0.4)]"
               )}
             >
               {category}
@@ -75,7 +83,7 @@ export const GallerysSection = () => {
           {filteredGallerys.map((gallery) => (
             <div
               key={gallery.id}
-              className="bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="bg-card rounded-lg overflow-hidden shadow-xs hover:shadow-[0_0_20px_rgba(139,92,246,0.4)] transition-shadow duration-500"
             >
               <div
                 role="button"
@@ -87,10 +95,11 @@ export const GallerysSection = () => {
                 <img
                   src={gallery.image}
                   alt={gallery.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-75 cursor-pointer"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-75 cursor-pointer"
                 />
-                <div className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center pointer-events-none">
-                  <span className="text-white text-lg font-semibold flex items-center gap-2">
+
+                <div className="hidden md:flex absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 items-center justify-center pointer-events-none">
+                  <span className="text-white text-lg font-semibold flex items-center gap-2 animate-pulse">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="w-5 h-5"
@@ -118,6 +127,7 @@ export const GallerysSection = () => {
                 </div>
 
                 <h3 className="text-xl font-semibold mb-1">{gallery.title}</h3>
+
                 <p className="text-muted-foreground text-sm mb-4">
                   {gallery.description}
                 </p>
@@ -140,11 +150,11 @@ export const GallerysSection = () => {
             <img
               src={selectedImage}
               alt="Preview"
-              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg"
+              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-[0_0_40px_rgba(139,92,246,0.8)] transition-transform duration-700 hover:scale-105"
             />
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 text-white bg-black/60 hover:bg-black/80 px-3 py-1 rounded-full text-sm"
+              className="absolute top-2 right-2 text-white bg-black/60 hover:bg-black/80 px-3 py-1 rounded-full text-sm transition-all"
             >
               ✕
             </button>
