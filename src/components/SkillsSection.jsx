@@ -33,8 +33,10 @@ export const SkillsSection = () => {
   };
 
   const getLevelColor = (level) => {
-    if (level >= 85) return "border border-green-400 text-green-400 rounded-full bg-green-400/10";
-    if (level >= 51) return "border border-yellow-400 text-yellow-400 rounded-full bg-yellow-400/10";
+    if (level >= 85)
+      return "border border-green-400 text-green-400 rounded-full bg-green-400/10";
+    if (level >= 51)
+      return "border border-yellow-400 text-yellow-400 rounded-full bg-yellow-400/10";
     return "border border-blue-400 text-blue-400 rounded-full bg-blue-400/10";
   };
 
@@ -56,7 +58,7 @@ export const SkillsSection = () => {
               className={cn(
                 "px-5 py-2 rounded-full transition-all duration-300 capitalize",
                 activeCategory === category
-                  ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_25px_rgba(167,139,250,0.6)] transition-all duration-300"
+                  ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_15px_rgba(139,92,246,0.6)]"
                   : "bg-secondary/70 text-foreground hover:bg-secondary/90 hover:shadow-[0_0_10px_rgba(139,92,246,0.4)]"
               )}
             >
@@ -88,11 +90,14 @@ export const SkillsSection = () => {
                   </div>
                 </div>
 
-                <div className="w-full bg-secondary/50 rounded-full h-2 overflow-hidden">
+                <div className="relative w-full bg-secondary/50 rounded-full h-2 overflow-hidden">
                   <div
-                    className="h-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 transition-all duration-500"
+                    className="relative h-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 transition-all duration-500"
                     style={{ width: `${skill.level}%` }}
-                  ></div>
+                  >
+                    {/* Efek aurora putih lembut */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-white/40 blur-[4px] opacity-70 animate-aurora"></div>
+                  </div>
                 </div>
 
                 <p className="text-xs text-muted-foreground mt-2 text-right">
