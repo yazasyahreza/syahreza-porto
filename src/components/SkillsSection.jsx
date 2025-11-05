@@ -95,7 +95,6 @@ export const SkillsSection = () => {
                     className="relative h-2 rounded-full bg-gradient-to-r from-purple-400 to-indigo-400 transition-all duration-500"
                     style={{ width: `${skill.level}%` }}
                   >
-                    {/* Efek aurora putih lembut */}
                     <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-white/40 blur-[4px] opacity-70 animate-aurora"></div>
                   </div>
                 </div>

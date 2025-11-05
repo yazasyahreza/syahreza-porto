@@ -9,7 +9,7 @@ const gallerys = [
     description:
       "Competent KKNI Level II Software Engineer, I received this certificate after passing the LSP exam in the software engineer field of expertise.",
     image: "/projects/s1.jpeg",
-    category: "certificates",
+    category: "achievement",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const gallerys = [
     description:
       "I got this certificate after participating in internship activities and getting a score of 93 predicate A.",
     image: "/projects/s2.jpeg",
-    category: "certificates",
+    category: "achievement",
   },
   {
     id: 3,
@@ -27,11 +27,11 @@ const gallerys = [
     description:
       "Excellent Junior Backend Dev, I got this certificate after graduating from my internship as a junior backend developer in a software house.",
     image: "/projects/s3.jpeg",
-    category: "certificates",
+    category: "achievement",
   },
 ];
 
-const categories = ["all", "certificates", "activities", "learning journey"];
+const categories = ["all", "achievement", "activities", "learning journey"];
 
 export const GallerysSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");

@@ -3,9 +3,9 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Company Profile Website",
+    title: "Onlenkan - Company Profile Website",
     description:
-      "This website displays information about the company and my activities during my internship there. This project is my final internship assignment and was developed within 6 months",
+      "This website displays information about the company and my activities during my internship there. This project is my final internship assignment and was developed within 2 months",
     image: "/projects/p1.png",
     tags: ["Bootstrap", "PHP Native", "MySQL"],
     demoURL: "https://mycompany-profile.ct.ws/user",
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "Administrator Company Profile Website",
+    title: "Administrator Onlenkan",
     description:
       "The data displayed on the company profile website will be processed on this page. This project is a continuation of the company profile website that serves as an administrator.",
     image: "/projects/p2a.png",
@@ -27,7 +27,7 @@ const projects = [
     description:
       "This simple blog platform features articles and insights about my school garden. The website is static and was developed within 1 month.",
     image: "/projects/p5.png",
-    tags: ["Laravel", "Bootstrap", "MySQL"],
+    tags: ["Laravel", "Bootstrap"],
     demoURL: "https://kebun-sekolah.rf.gd/projectku",
     githubURL: "https://github.com/yazasyahreza/garden-school",
   },
@@ -43,7 +43,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Ecommerce Website",
+    title: "Goocar - Ecommerce Website",
     description:
       "This e-commerce website displays a list of the best and latest cars, or it can be referred to as a car dealership website. Users can interact with the website and read information about car sales. I developed this project over a period of 3 weeks.",
     image: "/projects/p3.png",
@@ -53,9 +53,9 @@ const projects = [
   },
   {
     id: 6,
-    title: "Administrator Ecommerce Website",
+    title: "Administrator Goocar",
     description:
-      "The data displayed on the car dealership e-commerce website will be processed on this page. This project is a continuation of the car dealership website that functions as an administrator.",
+      "The data displayed on the car dealer e-commerce site (Goocar) will be processed on this page. This project is a continuation of the car dealer site (Goocar), which functions as an administrator for managing car data.",
     image: "/projects/p4.png",
     tags: ["Bootstrap", "PHP Native", "MySQL"],
     demoURL: "https://goocar25.xo.je/admin/login.php",
@@ -65,7 +65,7 @@ const projects = [
     id: 7,
     title: "APIs-based Store Application",
     description:
-      "Here, I have created CRUD operations to manage store data such as products and employees, as well as to perform sales transactions. This project is designed in the form of an API as a bridge between the backend and frontend. Developed within 1 months",
+      "This project was designed in the form of an API as a bridge between the backend and frontend. Here, I created CRUD operations to manage store data such as products and employees, conduct sales transactions, and view sales transaction history. This project was developed over a period of 1 month.",
     image: "/projects/p6.png",
     tags: ["Golang", "MySQL"],
     demoURL: "#",
@@ -75,7 +75,7 @@ const projects = [
     id: 8,
     title: "Administrator Training Course",
     description:
-      "This is an administrator website that serves to manage course data for training programs. Users can also monitor training progress over a period of 1 month. I developed this project while participating in one of the training programs on campus. Developed within 1 months",
+      "This is an administrator website that serves to manage course data for training programs. The site is equipped with features such as CRUD, real-time data search, data filtering, and others. This project was completed in 1 month.",
     image: "/projects/p8.png",
     tags: ["Laravel", "MySQL"],
     demoURL: "https://kursusunuja.ct.ws/login",
