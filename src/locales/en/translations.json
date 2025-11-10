@@ -1,0 +1,150 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "gallerys": "Gallerys",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "slogan": {
+      "1": "Hello World,",
+      "2": "This is",
+      "3": "My Space",
+      "4": "of Creation"
+    },
+    "subtitle": "Enjoy exploring my world of code and creativity, let's build something amazing together!",
+    "button": "View My Work",
+    "scroll": "Scroll"
+  },
+
+  "about": {
+    "title": "About",
+    "highlight": "Me",
+    "subtitle": "Junior Web Developer",
+    "desc1": "Hello, I'm Syahreza, I have over 2 years of experience in web development. I specialize in backend development, I enjoy creating APIs - designing clean, responsive, and functional web applications. Currently, I like learning about machine learning.",
+    "desc2": "I’m always excited to take on new challenges that push my creativity and problem-solving skills, turning ideas into something real that people can use and enjoy.",
+    "button1": "Get In Touch",
+    "button2": "Download CV",
+    "1": {
+      "title": "Web Development",
+      "desc": "Building responsive, high-performance websites with clean code and modern design."
+    },
+    "2": {
+      "title": "APIs Design",
+      "desc": "Designing robust, secure, and scalable APIs that connect systems efficiently."
+    },
+    "3": {
+      "title": "Project Management",
+      "desc": "Leading projects from conception to completion with agile methodologies."
+    }
+  },
+
+  "gallerys": {
+    "title": "The",
+    "highlight": "Gallerys",
+    "desc": "My gallery displays a collection of my achievements, activities, and learning journey information.",
+    "menu": {
+      "1": "All",
+      "2": "Achievement",
+      "3": "Activities",
+      "4": "Learning Journey"
+    },
+    "1": {
+      "title": "LSP Sertificate",
+      "desc": "This certificate is proof that I have been declared competent in the field of Software Engineering at KKNI Level II. This certificate was issued by the National Professional Certification Agency (BNSP) through the SMK Negeri 2 Kraksaan Professional Certification Institute. This qualification shows that I have basic to intermediate skills in the software development process."     
+    },
+    "2": {
+      "title": "Internship Certificate",
+      "desc": "I obtained this certificate after completing a Field Work Practice (PKL) in Software Engineering (RPL) at Onlenkan Probolinggo from January 9, 2023 to May 20, 2023. During the PKL, I was involved in web development and industrial work process implementation activities, and obtained a score of 93 with an A grade."
+    },
+    "3": {
+      "title": "Certificate of Internship Completion",
+      "desc": "I received this certificate for completing an internship program at Onlenkan.com from January 9, 2023 to May 20, 2023. During the internship program, I demonstrated excellent performance in the field of backend development and received an EXCELLENT rating."
+    },
+    "4": {
+      "title": "Best Laravel Male Participant Award",
+      "desc": "I received the award for Best Laravel Participant (Male) in the 2025 Engineering Bootcamp organized by the Student Executive Board of the Faculty of Engineering at Nurul Jadid University. I received this award in recognition of my skills, dedication, and achievements in mastering and implementing the Laravel framework."
+    }
+  },
+
+  "skills": {
+    "title": "My",
+    "highlight": "Skills",
+    "menu": {
+      "1": "All",
+      "4": "Tools"
+    },
+    "level": {
+      "1": "Pro",
+      "2": "Intermediate",
+      "3": "Learning"
+    }
+  },
+
+  "projects": {
+    "title": "Featured",
+    "highlight": "Projects",
+    "description": "Here are some of my recent projects. Each project was carefully crafted with attention to detail, performance, and user experience.",
+    "button": "Check My Github",
+
+    "1": {
+      "title": "Onlenkan - Company Profile Website",
+      "desc": "This project is an informative website that displays my company profile and a series of activities during my internship. Developed over two months as a final internship assignment, this project reflects my professional web design and development skills."
+    },
+    "2": {
+      "title": "Administrator Onlenkan",
+      "desc": "This page is used to process data that appears on the company profile website. This project is a further development of the Onlenkan website and serves as an administrator system for managing company information."
+    },
+    "3": {
+      "title": "Garden School Blog",
+      "desc": "This website is a simple blogging platform containing articles and insights about school gardens. Developed within a month, this project uses a static website concept with a focus on simplicity and ease of navigation."
+    },
+    "4": {
+      "title": "Ogeng Press - Store Application",
+      "desc": "I created this store application to help my father manage store inventory and transactions. Equipped with transaction processing, inventory management, and transaction history features, this project was developed in two weeks with the aim of improving store operational efficiency."
+    },
+    "5": {
+      "title": "Goocar - Ecommerce Website",
+      "desc": "This website is an e-commerce platform for car dealers that showcases the latest and best cars. Users can interact and read car sales information directly. This project was developed in three weeks to deliver a modern and interactive look."
+    },
+    "6": {
+      "title": "Administrator Goocar",
+      "desc": "This page is used to process and manage vehicle data on the Goocar e-commerce site. This project is an extension of the main Goocar site and functions as an administrator system for managing vehicle information."
+    },
+    "7": {
+      "title": "APIs-based Store Application",
+      "desc": "This project is an API that functions as a connector between the backend and frontend in a store management system. This API supports CRUD operations for product and employee data, transaction processing, and sales history display. This project was developed within one month."
+    },
+    "8": {
+      "title": "Administrator Training Course",
+      "desc": "This administrator website is used to manage course data in training programs. Equipped with CRUD features, real-time search, and data filtering, this project was completed within one month during the bootcamp."
+    }
+  },
+
+  "contacts": {
+    "title": "Get In",
+    "highlight": "Touch",
+    "desc": "Got an idea or project you'd like to bring to life? Let’s create something amazing together!",
+    "subtitle": "Contact Information",
+    "info": {
+      "hp": "Phone",
+      "loc": "Location"
+    },
+    "connect": "Connect With Me",
+    "form": {
+      "title": "Send a Message",
+      "input1": "Your Name",
+      "input2": "Your Email",
+      "input3": "Your Message",
+      "buttonload": "Sending..",
+      "buttonsend": "Send Meesage"
+    },
+    "toast": {
+      "title": "Message sent!",
+      "desc": "Thank you for your message. I'll get back to you soon."
+    }
+  }
+}

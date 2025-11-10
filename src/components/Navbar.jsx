@@ -1,42 +1,41 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
-import { ThemeToggle } from "./ThemeToggle";
-
-const navItems = [
-  { name: "Home", href: "#hero" },
-  { name: "About", href: "#about" },
-  { name: "Gallerys", href: "#gallerys" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
-];
+import { LanguageToggle } from "./LanguageToggle";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+  const navItems = [
+    { key: "home", href: "#hero" },
+    { key: "about", href: "#about" },
+    { key: "gallerys", href: "#gallerys" },
+    { key: "skills", href: "#skills" },
+    { key: "projects", href: "#projects" },
+    { key: "contact", href: "#contact" },
+  ];
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <>
-      {/* Navbar utama */}
       <nav
         className={cn(
-          "fixed w-full z-40 transition-all duration-300 py-5", // padding tetap
+          "fixed w-full z-40 transition-all duration-300 py-5",
           isScrolled
-            ? "bg-background/60 backdrop-blur-md shadow-sm" // efek muncul saat scroll
+            ? "bg-background/60 backdrop-blur-md shadow-sm"
             : "bg-transparent"
         )}
       >
         <div className="container flex items-center justify-between">
+          {/* Logo */}
           <a className="text-xl font-bold flex items-center" href="#hero">
             <span className="relative z-10 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
               <span className="text-glow text-foreground">S</span>YA
@@ -44,24 +43,25 @@ export const Navbar = () => {
             </span>
           </a>
 
-          {/* desktop nav */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item, key) => (
+            {navItems.map((item) => (
               <a
-                key={key}
+                key={item.key}
                 href={item.href}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
               >
-                {item.name}
+                {t(`navbar.${item.key}`)}
               </a>
             ))}
           </div>
 
-          <div className="hidden md:block">
-            <ThemeToggle />
+          {/* Theme + Language Toggle */}
+          <div className="hidden md:flex items-center space-x-3">
+            <LanguageToggle />
           </div>
 
-          {/* mobile nav button */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(true)}
             className={cn(
@@ -93,20 +93,20 @@ export const Navbar = () => {
         </button>
 
         <div className="flex flex-col space-y-8 text-xl">
-          {navItems.map((item, key) => (
+          {navItems.map((item) => (
             <a
-              key={key}
+              key={item.key}
               href={item.href}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
-              {item.name}
+              {t(`navbar.${item.key}`)}
             </a>
           ))}
 
           {isMenuOpen && (
-            <div className="mt-8">
-              <ThemeToggle />
+            <div className="mt-8 flex items-center space-x-3">
+              <LanguageToggle />
             </div>
           )}
         </div>

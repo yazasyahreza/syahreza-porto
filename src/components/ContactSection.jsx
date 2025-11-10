@@ -10,11 +10,13 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "../lib/utils";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [result, setResult] = useState("");
+  const { t } = useTranslation();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,8 +36,8 @@ export const ContactSection = () => {
       if (data.success) {
         setResult("Message sent successfully!");
         toast({
-          title: "Message sent!",
-          description: "Thank you for your message. I'll get back to you soon.",
+          title: t("contacts.toast.title"),
+          description: t("contacts.toast.desc"),
         });
         event.target.reset();
       } else {
@@ -52,21 +54,22 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-          Get In{" "}
+          {t("contacts.title")}{" "}
           <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
             {" "}
-            Touch
+            {t("contacts.highlight")}
           </span>
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Got an idea or project you'd like to bring to life? Let’s create
-          something amazing together!
+          {t("contacts.desc")}
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              {t("contacts.subtitle")}
+            </h3>
 
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
@@ -88,7 +91,7 @@ export const ContactSection = () => {
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Phone</h4>
+                  <h4 className="font-medium"> {t("contacts.info.hp")}</h4>
                   <a
                     href="tel:+6285150616368"
                     className="text-muted-foreground hover:text-primary transition-colors"
@@ -102,7 +105,7 @@ export const ContactSection = () => {
                   <MapPin className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-medium"> Location</h4>
+                  <h4 className="font-medium"> {t("contacts.info.loc")}</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
                     Probolinggo, Indonesia
                   </a>
@@ -111,7 +114,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
+              <h4 className="font-medium mb-4"> {t("contacts.connect")}</h4>
               <div className="flex space-x-4 justify-center">
                 <a
                   href="https://www.linkedin.com/in/yazasyahreza"
@@ -130,21 +133,19 @@ export const ContactSection = () => {
           </div>
 
           <div className="bg-card p-8 rounded-lg shadow-xs">
-            <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              {" "}
+              {t("contacts.form.title")}
+            </h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>
-              <input
-                type="hidden"
-                name="access_key"
-                value="2e4fb31c-681a-4bf8-9ec1-bdd745c0ab68"
-              ></input>
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Name
+                  {t("contacts.form.input1")}
                 </label>
                 <input
                   type="text"
@@ -160,7 +161,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Email
+                  {t("contacts.form.input2")}
                 </label>
                 <input
                   type="email"
@@ -176,7 +177,7 @@ export const ContactSection = () => {
                   className="block text-sm font-medium mb-2"
                 >
                   {" "}
-                  Your Message
+                  {t("contacts.form.input3")}
                 </label>
                 <textarea
                   id="message"
@@ -193,7 +194,9 @@ export const ContactSection = () => {
                   "cosmic-button relative text-white font-semibold rounded-full border border-violet-500 shadow-[0_0_10px_rgba(139,92,246,0.6)] hover:shadow-[0_0_25px_rgba(139,92,246,1)] hover:border-violet-400 transition-all duration-850 ease-in-out w-full flex items-center justify-center gap-2"
                 )}
               >
-                {isSubmitting ? "Sending.." : "Send Message"}
+                {isSubmitting
+                  ? t("contacts.form.buttonload")
+                  : t("contacts.form.buttonsend")}
                 <Send size={16} />
               </button>
             </form>

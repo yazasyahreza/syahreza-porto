@@ -1,80 +1,53 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
+import { useTranslation } from "react-i18next";
+import gallerys from "../data/gallerys";
 
-const gallerys = [
-  {
-    id: 1,
-    date: "Nov 2023",
-    title: "LSP Certificate",
-    description:
-      "Competent KKNI Level II Software Engineer, I received this certificate after passing the LSP exam in the software engineer field of expertise.",
-    image: "/projects/s1.jpeg",
-    category: "achievement",
-  },
-  {
-    id: 2,
-    date: "June 2023",
-    title: "Internship Certificate",
-    description:
-      "I got this certificate after participating in internship activities and getting a score of 93 predicate A.",
-    image: "/projects/s2.jpeg",
-    category: "achievement",
-  },
-  {
-    id: 3,
-    date: "June 2023",
-    title: "Certificate of Internship Completion",
-    description:
-      "Excellent Junior Backend Dev, I got this certificate after graduating from my internship as a junior backend developer in a software house.",
-    image: "/projects/s3.jpeg",
-    category: "achievement",
-  },
+const categories = [
+  { key: "all", labelKey: "gallerys.menu.1" },
+  { key: "achievement", labelKey: "gallerys.menu.2" },
+  { key: "activities", labelKey: "gallerys.menu.3" },
+  { key: "learning journey", labelKey: "gallerys.menu.4" },
 ];
 
-const categories = ["all", "achievement", "activities", "learning journey"];
 
 export const GallerysSection = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const filteredGallerys = gallerys.filter(
-    (gallery) => activeCategory === "all" || gallery.category === activeCategory
-  );
+  const filteredGallerys =
+    activeCategory === "all"
+      ? gallerys
+      : gallerys.filter((g) => g.category === activeCategory);
 
   return (
     <section id="gallerys" className="py-24 px-4 relative overflow-hidden">
-      <div
-        className="container mx-auto max-w-5xl"
-      >
-        <h2
-          className="text-3xl md:text-4xl font-bold mb-4 text-center"
-        >
-          The{" "}
+      <div className="container mx-auto max-w-5xl">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+          {t("gallerys.title")}{" "}
           <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Gallerys
+            {t("gallerys.highlight")}
           </span>
         </h2>
 
-        <p
-          className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto"
-        >
-          My Gallery showcases a collection of my certificates, activities, and
-          memorable moments.
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          {t("gallerys.desc")}
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => setActiveCategory(category.key)}
               className={cn(
                 "px-5 py-2 rounded-full transition-all duration-300 capitalize",
-                activeCategory === category
+                activeCategory === category.key
                   ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_15px_rgba(139,92,246,0.6)]"
                   : "bg-secondary/70 text-foreground hover:bg-secondary/90 hover:shadow-[0_0_10px_rgba(139,92,246,0.4)]"
               )}
             >
-              {category}
+              {t(category.labelKey)}
             </button>
           ))}
         </div>
@@ -126,10 +99,12 @@ export const GallerysSection = () => {
                   </span>
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1">{gallery.title}</h3>
+                <h3 className="text-xl font-semibold mb-1">
+                  {t(gallery.titleKey)}
+                </h3>
 
                 <p className="text-muted-foreground text-sm mb-4">
-                  {gallery.description}
+                  {t(gallery.descriptionKey)}
                 </p>
 
                 <p className="text-xs pt-2 text-center text-muted-foreground italic md:hidden">

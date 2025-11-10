@@ -1,5 +1,9 @@
 import { ArrowDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+
 export const HeroSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="hero"
@@ -14,24 +18,27 @@ export const HeroSection = () => {
             {" "}
             <span className="opacity-0 animate-fade-in">
               {" "}
-              Hello World,
+              {t("hero.slogan.1")}
+            </span>{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in">
+              {" "}
+              {t("hero.slogan.2")}
             </span>{" "}
             <br />{" "}
             <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in-delay-1">
               {" "}
-              My Space{" "}
+              {t("hero.slogan.3")}{" "}
             </span>{" "}
             <span className="text-gradient opacity-0 animate-fade-in-delay-2">
               {" "}
-              of Creation{" "}
+              {t("hero.slogan.4")}{" "}
             </span>{" "}
           </h1>{" "}
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             {" "}
-            Enjoy exploring my world of code and creativity, let’s build
-            something amazing together!{" "}
+            {t("hero.subtitle")}{" "}
           </p>{" "}
-          <div className="pt-4 opacity-0 animate-fade-in-delay-3">
+          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             {" "}
             <a
               href="#projects"
@@ -41,7 +48,7 @@ export const HeroSection = () => {
                     animate-pulseGlow"
             >
               {" "}
-              View My Work{" "}
+              {t("hero.button")}{" "}
             </a>{" "}
           </div>{" "}
         </div>{" "}
@@ -50,7 +57,7 @@ export const HeroSection = () => {
         {" "}
         <span className="text-sm text-muted-foreground mb-2">
           {" "}
-          Scroll{" "}
+          {t("hero.scroll")}{" "}
         </span>{" "}
         <a href="#about">
           {" "}

@@ -1,0 +1,144 @@
+{
+  "navbar": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "gallerys": "Galeri",
+    "skills": "Keahlian",
+    "projects": "Proyek",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "slogan": {
+      "1": "Halo Dunia,",
+      "2": "",
+      "3": "Ini Ruang",
+      "4": "Kreativitasku"
+    },
+    "subtitle": "Nikmati penjelajahan dunia koding dan kreativitas saya, mari kita buat sesuatu yang menakjubkan bersama!",
+    "button": "Lihat Proyekku",
+    "scroll": "Gulir"
+  },
+  "about": {
+    "title": "Tentang",
+    "highlight": "Saya",
+    "subtitle": "Junior Web Developer",
+    "desc1": "Halo, saya Syahreza, saya memiliki pengalaman lebih dari 2 tahun di bidang pengembangan web. Saya spesialis dalam pengembangan backend, saya senang membuat API - merancang aplikasi web yang bersih, responsif, dan fungsional. Saat ini, saya tertarik untuk mempelajari machine learning.",
+    "desc2": "Saya selalu antusias untuk menghadapi tantangan baru yang mengasah kreativitas dan kemampuan pemecahan masalah saya, mengubah ide-ide menjadi sesuatu yang nyata yang dapat digunakan dan dinikmati oleh orang lain.",
+    "button1": "Hubungi Kami",
+    "button2": "Unduh CV",
+    "1": {
+      "title": "Pengembangan Web",
+      "desc": "Membuat situs web responsif dan berperforma tinggi dengan kode yang rapi dan desain modern."
+    },
+    "2": {
+      "title": "Desain APIs",
+      "desc": "Merancang antarmuka pemrograman aplikasi (API) yang tangguh, aman, dan skalabel untuk menghubungkan sistem secara efisien."
+    },
+    "3": {
+      "title": "Manajemen Proyek",
+      "desc": "Mengelola proyek dari tahap konsepsi hingga penyelesaian dengan metode agile."
+    }
+  },
+  "gallerys": {
+    "title": "Galeri",
+    "highlight": "Saya",
+    "desc": "Galeri saya menampilkan kumpulan pencapaian, kegiatan, serta informasi perjalanan pembelajaran saya.",
+    "menu": {
+      "1": "Semua",
+      "2": "Pencapaian",
+      "3": "Kegiatan",
+      "4": "Proses Belajar"
+    },
+    "1": {
+      "title": "Sertifikat LSP",
+      "desc": "Sertifikat ini merupakan bukti bahwa saya telah dinyatakan kompeten di bidang Rekayasa Perangkat Lunak pada KKNI Level II. Sertifikat ini diterbitkan oleh Badan Nasional Sertifikasi Profesi (BNSP) melalui Lembaga Sertifikasi Profesi SMK Negeri 2 Kraksaan. Kualifikasi ini menunjukkan bahwa saya memiliki kemampuan dasar hingga menengah dalam proses pengembangan perangkat lunak."
+    },
+    "2": {
+      "title": "Sertifikat Magang",
+      "desc": "Saya memperoleh sertifikat ini setelah menyelesaikan Praktik Kerja Lapangan (PKL) di bidang Rekayasa Perangkat Lunak (RPL) di Onlenkan Probolinggo dari 9 Januari 2023 hingga 20 Mei 2023. Selama masa PKL, saya terlibat dalam pengembangan web serta kegiatan implementasi proyek industri, dan berhasil memperoleh nilai 93 dengan predikat A."
+    },
+    "3": {
+      "title": "Sertifikat Penyelesaian Magang",
+      "desc": "Saya menerima sertifikat ini sebagai bukti telah menyelesaikan program magang di Onlenkan.com dari 9 Januari 2023 hingga 20 Mei 2023. Selama program magang, saya menunjukkan kinerja yang sangat baik di bidang pengembangan backend dan memperoleh penilaian EXCELLENT (Sangat Baik)."
+    },
+    "4": {
+      "title": "Penghargaan Peserta Terbaik Laravel Laki-Laki",
+      "desc": "Saya menerima penghargaan sebagai Peserta Laravel Terbaik (Laki-laki) dalam Bootcamp Teknik 2025 yang diselenggarakan oleh Badan Eksekutif Mahasiswa Fakultas Teknik Universitas Nurul Jadid. Penghargaan ini diberikan sebagai pengakuan atas keterampilan, dedikasi, dan prestasi saya dalam menguasai dan menerapkan kerangka kerja Laravel."
+    }
+  },
+  "skills": {
+    "title": "Keahlian",
+    "highlight": "Saya",
+    "menu": {
+      "1": "Semua",
+      "4": "Alat"
+    },
+    "level": {
+      "1": "Pro",
+      "2": "Menengah",
+      "3": "Belajar"     
+    }
+  },
+  "projects": {
+    "title": "Proyek",
+    "highlight": "Unggulan",
+    "description": "Berikut adalah beberapa proyek terbaru saya. Setiap proyek dirancang dengan cermat, memperhatikan detail, kinerja, dan pengalaman pengguna.",
+    "button": "Lihat Github Saya",
+
+    "1": {
+      "title": "Onlenkan - Situs Web Company Profile",
+      "desc": "Proyek ini merupakan situs web informatif yang menampilkan profil perusahaan dan rangkaian kegiatan saya selama magang. Dikembangkan dalam waktu dua bulan sebagai tugas akhir magang, proyek ini mencerminkan kemampuan saya dalam perancangan dan pengembangan web secara profesional."
+    },
+    "2": {
+      "title": "Onlenkan Administrator",
+      "desc": "Halaman ini digunakan untuk memproses data yang muncul di situs web profil perusahaan. Proyek ini merupakan pengembangan lanjutan dari situs web Onlenkan dan berfungsi sebagai sistem administrator untuk mengelola informasi perusahaan."
+    },
+    "3": {
+      "title": "Blog Sekolah Kebun",
+      "desc": "Situs web ini merupakan platform blog sederhana yang berisi artikel dan wawasan mengenai kebun sekolah. Dikembangkan dalam waktu satu bulan, proyek ini menggunakan konsep situs statis dengan fokus pada kesederhanaan dan kemudahan navigasi."
+    },
+    "4": {
+      "title": "Ogeng Press - Aplikasi Toko",
+      "desc": "Aplikasi toko ini saya buat untuk membantu ayah saya dalam mengelola persediaan dan transaksi toko. Dilengkapi dengan fitur pengolahan transaksi, manajemen barang, dan riwayat transaksi, proyek ini dikembangkan dalam waktu dua minggu dengan tujuan meningkatkan efisiensi operasional toko."
+    },
+    "5": {
+      "title": "Goocar - Situs Web Ecommerce",
+      "desc": "Situs web ini merupakan platform e-commerce dealer mobil yang menampilkan mobil terbaru dan terbaik. Pengguna dapat berinteraksi dan membaca informasi penjualan mobil secara langsung. Proyek ini dikembangkan dalam waktu tiga minggu untuk menghadirkan tampilan modern dan interaktif."
+    },
+    "6": {
+      "title": "Goocar Administrator",
+      "desc": "Halaman ini digunakan untuk memproses dan mengelola data mobil pada situs e-commerce Goocar. Proyek ini merupakan bagian lanjutan dari situs utama Goocar dan berfungsi sebagai sistem administrator untuk pengelolaan informasi kendaraan."
+    },
+    "7": {
+      "title": "Aplikasi Toko Berbasis API",
+      "desc": "Proyek ini merupakan API yang berfungsi sebagai penghubung antara backend dan frontend dalam sistem manajemen toko. API ini mendukung operasi CRUD untuk data produk dan karyawan, pemrosesan transaksi, serta penampilan riwayat penjualan. Proyek ini dikembangkan dalam waktu satu bulan."
+    },
+    "8": {
+      "title": "Kursus Pelatihan Administrator",
+      "desc": "Situs web administrator ini digunakan untuk mengelola data kursus pada program pelatihan. Dilengkapi dengan fitur CRUD, pencarian real-time, dan penyaringan data, proyek ini diselesaikan dalam waktu satu bulan selama kegiatan bootcamp."
+    }
+  },
+  "contacts": {
+    "title": "Hubungi",
+    "highlight": "Saya",
+    "desc": "Punya ide atau proyek yang ingin Anda wujudkan? Mari kita ciptakan sesuatu yang luar biasa bersama-sama!",
+    "subtitle": "Informasi Kontak",
+    "info": {
+      "hp": "Telepon",
+      "loc": "Lokasi"
+    },
+    "connect": "Ikuti Jejaring Saya",
+    "form": {
+      "title": "Kirim Pesan",
+      "input1": "Namamu",
+      "input2": "Emailmu",
+      "input3": "Pesanmu",
+      "buttonload": "Diproses..",
+      "buttonsend": "Kirim Pesan"
+    },
+    "toast": {
+      "title": "Pesan Telah Terkirim!",
+      "desc": "Terima kasih atas pesannya. Saya akan segera menghubungi Anda."
+    }
+  }
+}

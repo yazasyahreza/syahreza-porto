@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
+import { useTranslation } from "react-i18next";
 
 const skills = [
   { name: "HTML/CSS", level: 95, category: "frontend" },
@@ -17,9 +18,15 @@ const skills = [
   { name: "VS Code", level: 90, category: "tools" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = [
+  { key: "all", labelKey: "skills.menu.1" },
+  { key: "frontend", labelKey: "frontend" },
+  { key: "backend", labelKey: "backend" },
+  { key: "tools", labelKey: "skills.menu.4" },
+];
 
 export const SkillsSection = () => {
+  const { t } = useTranslation();
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
@@ -27,9 +34,9 @@ export const SkillsSection = () => {
   );
 
   const getLevelName = (level) => {
-    if (level >= 85) return "Pro";
-    if (level >= 51) return "Intermediate";
-    return "Learning";
+    if (level >= 85) return t("skills.level.1");
+    if (level >= 51) return t("skills.level.2");
+    return t("skills.level.3");
   };
 
   const getLevelColor = (level) => {
@@ -44,9 +51,9 @@ export const SkillsSection = () => {
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My{" "}
+          {t("skills.title")}{" "}
           <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-            Skills
+            {t("skills.highlight")}{" "}
           </span>
         </h2>
 
@@ -54,15 +61,15 @@ export const SkillsSection = () => {
           {categories.map((category, key) => (
             <button
               key={key}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => setActiveCategory(category.key)}
               className={cn(
                 "px-5 py-2 rounded-full transition-all duration-300 capitalize",
-                activeCategory === category
+                activeCategory === category.key
                   ? "bg-gradient-to-r from-purple-400 to-indigo-400 text-white shadow-[0_0_15px_rgba(139,92,246,0.6)]"
                   : "bg-secondary/70 text-foreground hover:bg-secondary/90 hover:shadow-[0_0_10px_rgba(139,92,246,0.4)]"
               )}
             >
-              {category}
+              {t(category.labelKey)}
             </button>
           ))}
         </div>
