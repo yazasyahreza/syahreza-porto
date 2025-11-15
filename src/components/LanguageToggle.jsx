@@ -5,45 +5,36 @@ export const LanguageToggle = () => {
   const { i18n } = useTranslation();
   const isEnglish = i18n.language === "en";
 
-  const toggleLanguage = () => {
+  const toggle = () => {
     i18n.changeLanguage(isEnglish ? "id" : "en");
   };
 
   return (
-    <motion.button
-      onClick={toggleLanguage}
-      whileTap={{ scale: 0.95 }}
-      whileHover={{ scale: 1.03 }}
-      transition={{ type: "spring", stiffness: 300, damping: 25 }}
-      className="relative w-20 h-8 rounded-full flex items-center justify-between px-2
-                 bg-gradient-to-r from-purple-500/30 to-indigo-500/30 backdrop-blur-md
-                 border border-white/20 shadow-[0_0_10px_rgba(147,51,234,0.4)]
-                 text-white text-xs font-medium transition-all duration-300"
+    <button
+      onClick={toggle}
+      className="relative w-28 h-10 rounded-full bg-[#1e1e1e]
+                 border border-white/20 flex items-center px-3"
     >
-      {/* Label bahasa */}
-      <span
-        className={`${
-          isEnglish ? "opacity-100" : "opacity-60"
-        } transition-opacity`}
-      >
+      {/* Teks tetap diam */}
+      <span className="text-white text-xs font-semibold absolute left-3">
         EN
       </span>
-      <span
-        className={`${
-          isEnglish ? "opacity-60" : "opacity-100"
-        } transition-opacity`}
-      >
+
+      <span className="text-white text-xs font-semibold absolute right-3">
         ID
       </span>
 
-      {/* Tombol bulat yang bergerak */}
+      {/* Flag slider lebih dekat */}
       <motion.div
-        animate={{ x: isEnglish ? 0 : 48 }} // Geser halus 48px
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="absolute top-1 left-1 w-6 h-6 rounded-full 
-                   bg-gradient-to-r from-purple-400 to-indigo-400 
-                   shadow-[0_0_10px_rgba(147,51,234,0.6)]"
-      />
-    </motion.button>
+        animate={{ x: isEnglish ? 0 : 60 }}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className="absolute left-3 w-7 h-7 rounded-full shadow-lg"
+      >
+        <img
+          src={isEnglish ? "/flags/en.svg" : "/flags/id.svg"}
+          className="w-7 h-7 rounded-full"
+        />
+      </motion.div>
+    </button>
   );
 };
